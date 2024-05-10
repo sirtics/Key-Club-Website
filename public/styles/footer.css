@@ -8,25 +8,23 @@
 }
 
 body {
-  display: flex;
-  background: #fff;
-  justify-content: flex-end;
-  align-items: flex-end;
+  position: relative; /* Add this to establish a containing block for the footer */
   min-height: 100vh;
+  overflow: hidden;
+  margin: 0;
 }
 
 .footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background: #2C4E80;
-    min-height: 100px;
-    padding: 20px 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
+  position: absolute; /* Use absolute positioning to position the footer at the bottom of the page */
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #2C4E80;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
 }
 
   .social-icon,
