@@ -4,21 +4,18 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  
 }
 
 body {
-  position: relative; /* Add this to establish a containing block for the footer */
-  min-height: 100vh;
-  overflow: hidden;
-  margin: 0;
+  font-family: "Poppins", sans-serif;
+  display: flex; /* Add this to create a flex container */
+  flex-direction: column; /* Stack elements vertically */
+  min-height: 100vh; /* Ensure the body takes up the full viewport height */
 }
 
 .footer {
-  position: absolute; /* Use absolute positioning to position the footer at the bottom of the page */
-  bottom: 0;
-  left: 0;
-  right: 0;
+  margin-top: auto; /* Push the footer to the bottom of the page */
   background: #2C4E80;
   padding: 20px 50px;
   display: flex;
