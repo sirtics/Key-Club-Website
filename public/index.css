@@ -211,3 +211,10 @@
       }
   }
   
+  @media (max-width: 480px)
+  {
+    .h1-text{
+      margin-bottom: 2rem;
+    }
+  }
+  
