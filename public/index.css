@@ -214,7 +214,11 @@
   @media (max-width: 480px)
   {
     .h1-text{
-      margin-bottom: 2rem;
+      padding-bottom: 2rem;
+    }
+    
+    .short-desc{
+      padding-top: 1rem;
     }
   }
   
