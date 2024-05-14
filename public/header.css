@@ -17,7 +17,7 @@ body {
 
 .header {
   background-color: #2C4E80;
-  background: url(../images/topographicbg.png);
+  background: url(./images/topographicbg.png);
   padding: 1em;
   display: flex;
   justify-content: space-between;

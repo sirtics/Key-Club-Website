@@ -13,7 +13,7 @@
   #hero {
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.397), rgba(0, 0, 0, 0.384)), url('../images/parkview1.jpg') no-repeat center center / cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.397), rgba(0, 0, 0, 0.384)), url('./images/parkview1.jpg') no-repeat center center / cover;
     color: white;
     background-attachment: fixed;
   }
