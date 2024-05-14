@@ -6,9 +6,13 @@
 
 body {
     font-family: 'Poppins';
-    background: url(./images/contactbg.jpeg);
+    background: url(./images/parkview1.jpg);
+    
 }
 
+#id {
+    max-height: 100vh;
+}
 .contact-container {
     height: 100vh;
     margin-left: 3rem;

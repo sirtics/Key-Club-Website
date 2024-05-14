@@ -11,24 +11,25 @@
 </head>
 <body>
     <div id="header"></div>
-    <div class="contact-container">
-        <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
-            <div class="contact-left-title">
-                <h2>Contact Parkview Key Club</h2>
-                <hr>
+        <section id="main">
+        <div class="contact-container">
+            <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
+                <div class="contact-left-title">
+                    <h2>Contact Parkview Key Club</h2>
+                    <hr>
+                </div>
+                <input type="hidden" name="access_key" id="access_key" value="ba10fe42-d6f1-4d61-9f90-b2be5bb44360">
+                <input type="text" name="name" placeholder="Name" class="contact-inputs" autocomplete="off" required>
+                <input type="email" name="email" placeholder="Email Address" class="contact-inputs" required>
+                <textarea name="message" placeholder="Your Message"class="contact-inputs" autocomplete="off" required></textarea>
+                <button type="submit" onclick="message()"><img src="./images/sendmsg.png" alt="submit image"></button>
+                <input type="hidden" name="redirect" value="https://www.keyclub.org/">         
+            </form>
+            <div class="contact-right">
+                <img src="./images/logos/keyclub-logo.png" alt="Key Club logo for Parkview">
             </div>
-            <input type="hidden" name="access_key" id="access_key" value="ba10fe42-d6f1-4d61-9f90-b2be5bb44360">
-            <input type="text" name="name" placeholder="Name" class="contact-inputs" autocomplete="off" required>
-            <input type="email" name="email" placeholder="Email Address" class="contact-inputs" required>
-            <textarea name="message" placeholder="Your Message"class="contact-inputs" autocomplete="off" required></textarea>
-            <button type="submit" onclick="message()"><img src="./images/sendmsg.png" alt="submit image"></button>
-            <input type="hidden" name="redirect" value="https://www.keyclub.org/">         
-        </form>
-        <div class="contact-right">
-            <img src="./images/logos/keyclub-logo.png" alt="Key Club logo for Parkview">
         </div>
-    </div>
-
+    </section>
 
 
 
