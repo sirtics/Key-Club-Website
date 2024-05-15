@@ -5,16 +5,14 @@
 }
 
 body {
-    font-family: 'Poppins';
-/*     background: url(./images/parkview1.jpg); */
-    
+    font-family: 'Poppins';    
 }
 
 #id {
     max-height: 100vh;
 }
 .contact-container {
-    height: 89vh;
+    height: 100vh;
     padding-left: 3rem;
     display: flex;
     align-items: center;
@@ -110,5 +108,3 @@ body {
         font-size: 2rem;
     }
 }
-
-
