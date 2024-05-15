@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Poppins';
-    background: url(./images/parkview1.jpg);
+/*     background: url(./images/parkview1.jpg); */
     
 }
 
@@ -19,6 +19,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    background: url(./images/parkview1.jpg);
 }
 
 .contact-left{
