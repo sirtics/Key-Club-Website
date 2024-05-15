@@ -31,8 +31,9 @@ body {
 .contact-left-title h2 {
     font-weight: 600;
     color: #ffffff;
-    font-size: 40px;
+    font-size: 3.5rem;
     margin-bottom: 5px;
+    padding-top: 2rem;
 }
 
 .contact-left-title hr {
@@ -103,6 +104,10 @@ body {
     }
 }
 
-
+@media(max-width: 768px){
+    .contact-left-title h2 {
+        font-size: 2rem;
+    }
+}
 
 
