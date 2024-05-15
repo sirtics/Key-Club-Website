@@ -223,8 +223,11 @@
     }
   }
   
-@media (max-height: 800px){
+@media (max-height: 768px){
     .h1-text{
         padding-bottom: 1.5rem;
+    }
+    .short-desc{
+        margin-top: 1rem;
     }
 }
