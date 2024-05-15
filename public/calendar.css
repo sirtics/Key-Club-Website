@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+  }
+  
+  body, html {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  
+  #hero {
+    width: 100%;
+    min-height: 69vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.397), rgba(0, 0, 0, 0.384)), url('./images/parkview1.jpg') no-repeat center center / cover;
+    color: white;
+    background-attachment: fixed;
+  }
+  
+  .h1-text {
+    width: 40rem;
+    height: 15rem;
+    padding-top: 4rem;
+    position: absolute;
+    text-align: left;
+    color: white;
+    font-size: 4rem;
+    font-family: Poppins;
+    font-weight: 700;
+    word-wrap: break-word;
+    left: 5%; /* Align left */
+    top: 40%;
+    transform: translateY(-50%); /* Vertically center */
+  }
+  
+  .short-desc {
+    max-width: 57.75rem;
+    position: absolute;
+    text-align: left;
+    color: white;
+    padding-top: 3rem;
+    font-size: 1.1em;
+    font-family: Poppins;
+    font-weight: 500;
+    word-wrap: break-word;
+    left: 5%; /* Align left */
+    top: 70%;
+    transform: translateY(-50%); /* Vertically center */
+  }
