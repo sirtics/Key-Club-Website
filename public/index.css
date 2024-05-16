@@ -17,7 +17,11 @@
     color: white;
     background-attachment: fixed;
   }
-  
+
+.navbar{
+    position: fixed;
+}
+
   .h1-text {
     width: 40rem;
     height: 15rem;
