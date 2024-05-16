@@ -20,6 +20,12 @@ body {
     background: url(./images/parkview1.jpg);
 }
 
+div#header{
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
+
 .contact-left{
     display: flex;
     flex-direction: column;
