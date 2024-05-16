@@ -18,6 +18,11 @@
     background-attachment: fixed;
   }
 
+div#header{
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
 
   .h1-text {
     width: 40rem;
