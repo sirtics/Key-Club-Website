@@ -124,7 +124,7 @@ div#header{
     }
 
     #main {
-        height: 100vh;
+        height: 110vh;
     }
     
     .contact-left textarea{
@@ -133,7 +133,7 @@ div#header{
     }
     
     .contact-container{
-        padding-top: 4rem;
+        margin-top: 4rem;
     }
     
     div#header{
