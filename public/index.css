@@ -13,7 +13,7 @@
   #hero {
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.397), rgba(0, 0, 0, 0.384)), url('./images/parkview1.jpg') no-repeat center center / cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.397), rgba(0, 0, 0, 0.384)), url('./images/parkview2.jpg') no-repeat center center / cover;
     color: white;
     background-attachment: fixed;
   }
@@ -55,99 +55,116 @@
   
   /* CAROUSEL CSS */
   
-  .slideshow-container {
-      max-width: 1000px;
-      position: relative;
-      margin: auto;
+  .centered {
+    font-size: 3rem;
+    text-align: center;
+    color: white;
+    font-weight: 600;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .carousel {
+    width: 80vw;
+    height: 30rem;
+    position: relative; /* Add this */
+    margin-bottom: 2rem;
+    margin-left: 10%;
   }
   
-  .mySlides {
-      display: none;
-      width: 100%;
-      height: 300px;
-      opacity: 1;
+  .carousel [data-carousel-slides] {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  .carousel [data-carousel-dots] {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    z-index: 2;
+    position: absolute;
+    left: 50%;
+    bottom: 2vh;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 1rem;
+  }
+  .carousel [data-carousel-dots] [data-carousel-dot] {
+    background-color: rgba(255, 255, 255, 1);
+    height: 0.78rem;
+    width: 0.78rem;
+    border-radius: 0.78rem;
+    cursor: pointer;
+    transition: 0.5s;
+    opacity: 0.5;
+  }
+
+  .carousel [data-carousel-dots] [data-active] {
+    opacity: 1;
+  }
+  .slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 200ms;
+    transition-timing-function: ease-in-out;
+    transition-delay: 200ms;
+  }
+  .slide[data-active] {
+    opacity: 1;
+    z-index: 1;
+    transition-delay: 0ms;
+  }
+  .slide > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+  }
+  .carousel-button {
+    position: absolute;
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 4rem;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    padding: 0 0.5rem;
+    border-radius: 0.25rem;
+    background-color: rgba(0, 0, 0, 0.1);
+    transition: 0.5s;
+  }
+  .carousel-button:hover,
+  .carousel-button:focus {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #fff;
   }
   
-  .prev, .next {
-      cursor: pointer;
-      position: absolute;
-      top: 50%;
-      width: auto;
-      margin-top: -22px;
-      padding: 16px;
-      color: white;
-      font-weight: bold;
-      font-size: 18px;
-      transition: 0.6s ease;
-      border-radius: 0 3px 3px 0;
-      user-select: none;
-      background-color: rgba(0,0,0,0.8);
+  .carousel-button[data-carousel-btn="prev"] {
+    left: 1rem;
   }
   
-  .next {
-      right: 0;
-      border-radius: 3px 0 0 3px;
+  .carousel-button[data-carousel-btn="next"] {
+    right: 1rem;
   }
   
-  .prev:hover, .next:hover {
-      background-color: rgba(0,0,0,0.6);
-  }
-  
-  .text {
-      color: #f2f2f2;
-      font-size: 15px;
-      padding: 8px 12px;
-      position: absolute;
-      bottom: 8px;
-      width: 100%;
-      text-align: center;
-  }
-  
-  .numbertext {
-      color: #f2f2f2;
-      font-size: 12px;
-      padding: 8px 12px;
-      position: absolute;
-      top: 0;
-  }
-  
-  .dot {
-      cursor: pointer;
-      height: 15px;
-      width: 15px;
-      margin: 0 2px;
-      background-color: #bbb;
-      border-radius: 50%;
-      display: inline-block;
-      transition: background-color 0.6s ease;
-  }
-  
-  .active, .dot:hover {
-      background-color: #717171;
-  }
-  
-  .fade {
-      animation-name: fade;
-      animation-duration: 1.5s;
-      opacity: 1;
-  }
-  
-  .fade:not(.show) {
-      opacity: 1;
-  }
-  
-  @keyframes fade {
-      from {opacity: .4}
-      to {opacity: 1}
-  }
-  
-  .mySlides img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      opacity: 1;
-  }
-  
+
+
+
+
+
+
+
+
+
   /* Responsive Design */
   
   @media (max-width: 1024px) {
@@ -158,10 +175,6 @@
         font-size: 4rem;
         left: 5%;
         top: 35%;
-      }
-      .slider-container {
-        max-width: 800px;
-        max-height: 500px;
       }
       .button {
         width: 200px;
@@ -174,13 +187,9 @@
       .h1-text {
         font-size: 3rem;
         padding-top: 2rem;
-        width: 100%;
+        width: 100vw;
         height: 8rem;
         top: 40%;
-      }
-      .slider-container {
-        max-width: 500px;
-        max-height: 300px;
       }
       .button {
         width: 100px;
@@ -189,28 +198,8 @@
       }
   }
   
-  @media (max-width: 1024px) {
-      .mySlides img {
-        height: 100%;
-      }
-      .dot {
-        margin: 0 0.5rem;
-      }
-  }
-  
-  @media (max-width: 768px) {
-      .mySlides img {
-        height: 100%;
-      }
-      .slider-container {
-        max-width: 100%;
-        max-height: 100%;
-      }
-      .dot {
-        margin: 0 0.25rem;
-      }
-  }
-  
+
+
   @media (max-width: 480px)
   {
     .h1-text{

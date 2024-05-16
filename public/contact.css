@@ -105,6 +105,6 @@ body {
 
 @media(max-width: 768px){
     .contact-left-title h2 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 }

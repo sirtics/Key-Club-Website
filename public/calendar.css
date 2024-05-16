@@ -11,15 +11,16 @@
   }
   
   section#hero {
-    width: 100%;
     height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.397), rgba(0, 0, 0, 0.384)), url('./images/parkview1.jpg') no-repeat center center / cover;
     color: white;
     background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background: linear-gradient(rgba(0, 0, 0, 0.397), rgba(0, 0, 0, 0.384)), url('./images/parkview3.jpg') no-repeat center center / cover;
   }
   
   .h1-text {
-    width: 40rem;
     height: 15rem;
     padding-top: 4rem;
     position: absolute;
@@ -31,7 +32,6 @@
     word-wrap: break-word;
     left: 5%; /* Align left */
     top: 40%;
-    transform: translateY(-50%); /* Vertically center */
   }
   
   .short-desc {
@@ -48,3 +48,28 @@
     top: 70%;
     transform: translateY(-50%); /* Vertically center */
   }
+
+  @media (max-width: 700px){
+    .h1-text, .short-desc {
+      text-align: center;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      position: relative;
+      left: 0;
+      top: 0;
+      transform: none; /* Reset transformation */
+      padding-top: 0; /* Remove unnecessary padding */
+    }
+    
+    .h1-text {
+      top: 50%; /* Center vertically */
+      transform: translateY(-50%); /* Adjust for vertical centering */
+    }
+    
+    .short-desc {
+      top: 60%; /* Adjust for vertical centering */
+      transform: translateY(-250%); /* Adjust for vertical centering */
+    }
+  }
+  

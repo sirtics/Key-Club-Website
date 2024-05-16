@@ -1,59 +1,54 @@
-document.addEventListener("DOMContentLoaded", function() {
-    let slideIndex = 0;
-    const slides = document.querySelectorAll(".mySlides");
-    const dots = document.querySelectorAll(".dot");
-    let slideInterval;
+const buttons = document.querySelectorAll("[data-carousel-btn]");
+const dots = document.querySelectorAll("[data-carousel-dot]");
 
-    // Function to move to the next slide
-    function plusSlides(n) {
-        showSlides(slideIndex += n);
+function slide(button) {
+  return () => {
+    const offset = button.dataset.carouselBtn === "next" ? 1 : -1;
+    const slidesContainer = button
+      .closest("[data-carousel]")
+      .querySelector("[data-carousel-slides");
+    const slides = slidesContainer.querySelectorAll("[data-carousel-slide]");
+    const activeSlide = slidesContainer.querySelector("[data-active]");
+    const activeSlideIndex = [...slides].indexOf(activeSlide);
+    const nextSlideIndex = activeSlideIndex + offset;
+    switch (nextSlideIndex) {
+      case -1:
+        moveDot(2)();
+        break;
+      case 1:
+        moveDot(1)();
+        break;
+      case 2:
+        moveDot(2)();
+        break;
+      default:
+        moveDot(0)();
+        break;
     }
-
-    // Function to show a particular slide
-    function currentSlide(n) {
-        showSlides(slideIndex = n - 1);
+    if (nextSlideIndex < 0) {
+      slides[slides.length + nextSlideIndex].dataset.active = true;
+      return delete activeSlide.dataset.active;
     }
-
-    function showSlides(n) {
-        // Reset timer
-        clearInterval(slideInterval);
-
-        if (n >= slides.length) {
-            slideIndex = 0;
-        } else if (n < 0) {
-            slideIndex = slides.length - 1;
-        }
-
-        // Hide all slides and remove active class from dots
-        slides.forEach(slide => slide.style.display = "none");
-        dots.forEach(dot => dot.classList.remove("active"));
-
-        // Show the current slide and add active class to the corresponding dot
-        slides[slideIndex].style.display = "block";
-        dots[slideIndex].classList.add("active");
-
-        // Move to the next slide every 5 seconds
-        slideInterval = setInterval(function() {
-            plusSlides(1);
-        }, 5000);
+    if (nextSlideIndex >= slides.length) {
+      slides[0].dataset.active = true;
+      return delete activeSlide.dataset.active;
     }
+    slides[nextSlideIndex].dataset.active = true;
+    return delete activeSlide.dataset.active;
+  };
+}
 
-    // Event listener for previous/next controls
-    document.querySelector('.prev').addEventListener('click', () => {
-        plusSlides(-1);
-    });
+function moveDot(i) {
+  return () => {
+    const dot = dots[i];
+    dots.forEach((d) => "active" in d.dataset && delete d.dataset.active);
+    dot.dataset.active = true;
+  };
+}
 
-    document.querySelector('.next').addEventListener('click', () => {
-        plusSlides(1);
-    });
-
-    // Event listener for dot controls
-    dots.forEach((dot, index) => {
-        dot.addEventListener('click', () => {
-            currentSlide(index + 1);
-        });
-    });
-
-    // Call showSlides to initialize the slideshow
-    showSlides(slideIndex);
+window.addEventListener("DOMContentLoaded", () => {
+  buttons.forEach((button) => button.addEventListener("click", slide(button)));
+  setInterval(() => {
+    slide(buttons[1])();
+  }, 3500);
 });
