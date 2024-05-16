@@ -226,4 +226,10 @@ div#header{
         margin-top: 1rem;
         top: 80%;
     }
+    div#header{
+        position: absolute;
+        width: 100%;
+        z-index: 2;
+    }
+
 }
