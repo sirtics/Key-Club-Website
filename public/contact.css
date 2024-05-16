@@ -123,8 +123,8 @@ div#header{
         height: 40px;
     }
 
-    #id {
-        height: auto;
+    #main {
+        height: 100vh;
     }
     
     .contact-left textarea{
