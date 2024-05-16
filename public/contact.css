@@ -131,6 +131,12 @@ div#header{
         padding-top: 4rem;
     }
     
+    div#header{
+        position: absolute;
+        width: 100%;
+        z-index: 2;
+    }
+    
     .contact-right{
         width: 200px;
         height: 200px;
