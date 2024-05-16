@@ -119,16 +119,16 @@ div#header{
 
 @media(max-height: 768px){
     .contact-inputs{
-        width: 250px;
+        width: 300px;
         height: 40px;
     }
 
     .contact-left textarea{
-        max-height: 130px;
+        max-height: 140px;
     }
     
     .contact-container{
-        padding-top: 3rem;
+        padding-top: 4rem;
     }
     
     .contact-right{
