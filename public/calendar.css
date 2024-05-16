@@ -78,4 +78,11 @@ div#header{
       transform: translateY(-250%); /* Adjust for vertical centering */
     }
   }
-  
+
+@media(max-height: 768px){
+    div#header{
+        position: absolute;
+        width: 100%;
+        z-index: 2;
+    }
+}
