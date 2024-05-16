@@ -66,6 +66,7 @@ div#header{
 
 .contact-left textarea {
     height: 140px;
+    max-width: 400px;
     padding-top: 15px;
     border-radius: 20px;
 }
@@ -114,4 +115,25 @@ div#header{
     .contact-left-title h2 {
         font-size: 1.8rem;
     }
+}
+
+@media(max-height: 768px){
+    .contact-inputs{
+        width: 250px;
+        height: 40px;
+    }
+
+    .contact-left textarea{
+        max-height: 130px;
+    }
+    
+    .contact-container{
+        padding-top: 3rem;
+    }
+    
+    .contact-right{
+        width: 200px;
+        height: 200px;
+    }
+    
 }
