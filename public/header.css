@@ -37,10 +37,10 @@ body {
   transition: transform 0.3s ease;
 }
 
-.brand:hover::before {
+/* .brand:hover::before {
   transform: translate3d(-10px, -10px, 0);
 }
-
+ */
 .navbar {
   display: flex;
   align-items: center;
