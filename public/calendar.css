@@ -61,7 +61,7 @@ div#header{
       align-items: center;
       display: flex;
       justify-content: center;
-      position: relative;
+      position: absolute;
       left: 0;
       top: 0;
       transform: none; /* Reset transformation */
@@ -69,12 +69,14 @@ div#header{
     }
     
     .h1-text {
-      top: 50%; /* Center vertically */
+      top: 30%; /* Center vertically */
+      left: 25%;
       transform: translateY(-50%); /* Adjust for vertical centering */
     }
     
     .short-desc {
-      top: 60%; /* Adjust for vertical centering */
+      top: 50%; /* Adjust for vertical centering */
+      left: 15%
       transform: translateY(-250%); /* Adjust for vertical centering */
     }
   }
