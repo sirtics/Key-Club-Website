@@ -2,11 +2,12 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    overflow-x: hidden;
 }
 
 body {
     font-family: 'Poppins';
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 #main {
@@ -106,7 +107,7 @@ div#header{
 
 @media (max-width: 1000px) {
     .contact-inputs{
-        width: 80vw;
+        width: 400px;
     }
 
     .contact-right{
@@ -124,6 +125,10 @@ div#header{
     .contact-inputs{
         width: 400px;
         height: 40px;
+    }
+
+    .contact-left-title h2 {
+        font-size: 1.3rem;
     }
 
     #main {
