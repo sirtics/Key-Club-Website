@@ -2,23 +2,15 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    
-  }
-  
-  body, html {
+}
+
+body, html {
     overflow-y: auto;
     overflow-x: hidden;
-  }
-
-
-  div#header{
-    position: fixed;
-    width: 100%;
-    z-index: 2;
 }
 
 section#hero {
-    height: 100vh;
+    min-height: 100vh;
     color: white;
     background-attachment: fixed;
     display: flex;
@@ -26,7 +18,7 @@ section#hero {
     align-items: center;
     justify-content: center;
     background: linear-gradient(rgba(0, 0, 0, 0.397), rgba(0, 0, 0, 0.384)), url('./images/parkview3.jpg') no-repeat center center / cover;
-    padding: 1rem; /* Add padding for better spacing on small screens */
+    padding: 2rem; /* Add padding for better spacing on small screens */
 }
 
 .h1-text {
@@ -37,6 +29,8 @@ section#hero {
     font-weight: 700;
     word-wrap: break-word;
     margin-bottom: 1rem; /* Add margin for spacing */
+    z-index: 1; /* Ensure it stays above the header */
+    padding-top: 5rem; /* Add padding to prevent overlap */
 }
 
 .short-desc {
@@ -47,6 +41,8 @@ section#hero {
     font-family: Poppins;
     font-weight: 500;
     margin-bottom: 2rem; /* Add margin for spacing */
+    z-index: 1; /* Ensure it stays above the header */
+    padding-top: 2rem; /* Add padding to prevent overlap */
 }
 
 .calendar iframe {
@@ -56,16 +52,18 @@ section#hero {
     max-width: 650px;
     max-height: 500px;
     margin: 0 auto; /* Center the iframe */
+    z-index: 1; /* Ensure it stays above the header */
 }
 
-
-  @media (max-width: 700px) {
+@media (max-width: 700px) {
     .h1-text {
         font-size: 2.5rem; /* Adjust font size for smaller screens */
+        padding-top: 7rem; /* Increase padding to prevent overlap */
     }
 
     .short-desc {
         font-size: 1em; /* Adjust font size for smaller screens */
+        padding-top: 1rem; /* Increase padding to prevent overlap */
     }
 
     .calendar iframe {
