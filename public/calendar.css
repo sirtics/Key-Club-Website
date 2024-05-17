@@ -28,21 +28,21 @@ section#hero {
     font-family: Poppins;
     font-weight: 700;
     word-wrap: break-word;
-    margin-bottom: 1rem; /* Add margin for spacing */
-    z-index: 1; /* Ensure it stays above the header */
-    padding-top: 5rem; /* Add padding to prevent overlap */
+    margin-bottom: 1rem; 
+    z-index: 1; 
+    padding-top: 5rem; 
 }
 
 .short-desc {
     max-width: 30rem;
-    text-align: center; /* Center text on all screens */
+    text-align: center; 
     color: white;
     font-size: 1.1em;
     font-family: Poppins;
     font-weight: 500;
-    margin-bottom: 2rem; /* Add margin for spacing */
+    margin-bottom: 2rem; 
     z-index: 1; /* Ensure it stays above the header */
-    padding-top: 2rem; /* Add padding to prevent overlap */
+    padding-top: 2rem; 
 }
 
 .calendar iframe {
@@ -51,24 +51,24 @@ section#hero {
     height: auto;
     max-width: 650px;
     max-height: 500px;
-    margin: 0 auto; /* Center the iframe */
-    z-index: 1; /* Ensure it stays above the header */
+    margin: 0 auto; 
+    z-index: 1; 
 }
 
 @media (max-width: 700px) {
     .h1-text {
-        font-size: 2.5rem; /* Adjust font size for smaller screens */
-        padding-top: 7rem; /* Increase padding to prevent overlap */
+        font-size: 2.5rem; 
+        padding-top: 7rem; 
     }
 
     .short-desc {
-        font-size: 1em; /* Adjust font size for smaller screens */
-        padding-top: 1rem; /* Increase padding to prevent overlap */
+        font-size: 1em; 
+        padding-top: 1rem; 
     }
 
     .calendar iframe {
         width: 100%;
-        height: 400px; /* Adjust iframe height for smaller screens */
+        height: 400px;
     }
 }
 
@@ -77,5 +77,19 @@ section#hero {
         position: absolute;
         width: 100%;
         z-index: 2;
+    }
+}
+
+@media (max-width: 768px) and (max-height: 768px) {
+    .short-desc {
+        display: none; /* hides short desc */
+    }
+
+    .h1-text {
+        padding-top: 8rem; 
+    }
+
+    .calendar iframe {
+        margin-top: 2rem; 
     }
 }
