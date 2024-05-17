@@ -2,10 +2,11 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 body {
-    font-family: 'Poppins';    
+    font-family: 'Poppins';
 }
 
 #main {
@@ -124,7 +125,7 @@ div#header{
     }
 
     #main {
-        height: 110vh;
+        height: 100vh;
     }
     
     .contact-left textarea{
@@ -147,4 +148,13 @@ div#header{
         height: 200px;
     }
     
+}
+
+@media (max-width: 480px){
+    .contact-inputs, .contact-left textarea{
+        width: 300px;  
+    }
+    .contact-left-title h2{
+        max-width: 300px; 
+    }
 }
