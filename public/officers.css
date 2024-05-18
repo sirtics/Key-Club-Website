@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+  }
+  
+  body, html {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  
+  section#hero {
+    height: 100vh;
+    color: white;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background: linear-gradient(rgba(0, 0, 0, 0.397), rgba(0, 0, 0, 0.384)), url('./images/parkview2.jpg') no-repeat center center / cover;
+  }
+  
+  .h1-text {
+    height: 15rem;
+    padding-top: 4rem;
+    position: absolute;
+    text-align: left;
+    color: white;
+    font-size: 4rem;
+    font-family: Poppins;
+    font-weight: 700;
+    word-wrap: break-word;
+    left: 5%; /* Align left */
+    top: 40%;
+  }
+  
+  .short-desc {
+    max-width: 30rem;
+    position: absolute;
+    text-align: left;
+    color: white;
+    padding-top: 3rem;
+    font-size: 1.1em;
+    font-family: Poppins;
+    font-weight: 500;
+    word-wrap: break-word;
+    left: 5%; /* Align left */
+    top: 70%;
+    transform: translateY(-50%); /* Vertically center */
+  }
+
+  @media (max-width: 700px){
+    .h1-text, .short-desc {
+      text-align: center;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      position: relative;
+      left: 0;
+      top: 0;
+      transform: none; /* Reset transformation */
+      padding-top: 0; /* Remove unnecessary padding */
+    }
+    
+    .h1-text {
+      top: 50%; /* Center vertically */
+      transform: translateY(-50%); /* Adjust for vertical centering */
+    }
+    
+    .short-desc {
+      top: 60%; /* Adjust for vertical centering */
+      transform: translateY(-250%); /* Adjust for vertical centering */
+    }
+  }
+  

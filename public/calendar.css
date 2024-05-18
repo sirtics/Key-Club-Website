@@ -1,56 +1,118 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    
-  }
-  
-  body, html {
-    overflow-y: auto;
-    overflow-x: hidden;
-  }
-  
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+section#hero {
+  min-height: 100vh; /* Changed from height to min-height */
+  color: white;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: row; /* Default layout */
+  align-items: center;
+  justify-content: space-evenly;
+  background: linear-gradient(rgba(0, 0, 0, 0.397), rgba(0, 0, 0, 0.384)), url('./images/parkview3.jpg') no-repeat center center / cover;
+}
+
+.h1-text {
+  height: auto; /* Adjusted height */
+  padding-top: 4rem;
+  position: absolute;
+  text-align: left;
+  color: white;
+  font-size: 4rem;
+  font-family: Poppins;
+  font-weight: 700;
+  word-wrap: break-word;
+  left: 5%; /* Align left */
+  top: 40%;
+  z-index: 1; /* Ensure it stays above the header */
+}
+
+.short-desc {
+  max-width: 30rem;
+  position: absolute;
+  text-align: left;
+  color: white;
+  padding-top: 3rem;
+  font-size: 1.1em;
+  font-family: Poppins;
+  font-weight: 500;
+  word-wrap: break-word;
+  left: 5%; /* Align left */
+  top: 70%;
+  transform: translateY(-50%); /* Vertically center */
+  z-index: 1; /* Ensure it stays above the header */
+}
+
+.calendar iframe {
+  border: 0;
+  max-width: 650px;
+  max-height: 500px;
+  margin: 0 auto; /* Center the iframe */
+  z-index: 1; /* Ensure it stays above the header */
+}
+
+/* Adjust layout for smaller screens */
+@media (max-width: 1105px) {
   section#hero {
-    height: 100vh;
-    color: white;
-    background-attachment: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    background: linear-gradient(rgba(0, 0, 0, 0.397), rgba(0, 0, 0, 0.384)), url('./images/parkview3.jpg') no-repeat center center / cover;
-  }
-  
-  .h1-text {
-    height: 15rem;
-    padding-top: 4rem;
-    position: absolute;
-    text-align: left;
-    color: white;
-    font-size: 4rem;
-    font-family: Poppins;
-    font-weight: 700;
-    word-wrap: break-word;
-    left: 5%; /* Align left */
-    top: 40%;
-  }
-  
-  .short-desc {
-    max-width: 30rem;
-    position: absolute;
-    text-align: left;
-    color: white;
-    padding-top: 3rem;
-    font-size: 1.1em;
-    font-family: Poppins;
-    font-weight: 500;
-    word-wrap: break-word;
-    left: 5%; /* Align left */
-    top: 70%;
-    transform: translateY(-50%); /* Vertically center */
+      flex-direction: column; /* Change to column layout */
+      justify-content: center; /* Center align vertically */
+      padding: 2rem; /* Add padding for better spacing */
   }
 
-  @media (max-width: 700px){
-    .h1-text, .short-desc {
+  .h1-text, .short-desc {
+      position: relative;
+      left: 0;
+      top: 0;
+      text-align: center;
+      padding: 1rem 0; /* Add padding for spacing */
+      transform: none; /* Reset transformation */
+  }
+
+  .calendar iframe {
+      margin-left: 0; /* Reset margin */
+      width: 90%; /* Adjust width for smaller screens */
+      max-width: 600px; /* Ensure max-width */
+      height: auto;
+      max-height: 500px;
+  }
+}
+
+/* Hide short description for very small screens */
+@media (max-width: 768px) and (max-height: 768px) {
+  .short-desc {
+      display: none; /* Hide short description */
+  }
+
+  .h1-text {
+      padding-top: 7rem; /* Add padding to prevent overlap */
+  }
+}
+
+/* Additional adjustments for specific width ranges */
+@media (max-width: 1350px) {
+  .calendar iframe {
+      width: 30rem;
+      height: 20rem;
+  }
+}
+
+@media (max-width: 1100px) {
+  .calendar iframe {
+      width: 25rem;
+      height: 20rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .h1-text, .short-desc {
       text-align: center;
       align-items: center;
       display: flex;
@@ -60,16 +122,53 @@
       top: 0;
       transform: none; /* Reset transformation */
       padding-top: 0; /* Remove unnecessary padding */
-    }
-    
-    .h1-text {
-      top: 50%; /* Center vertically */
-      transform: translateY(-50%); /* Adjust for vertical centering */
-    }
-    
-    .short-desc {
-      top: 60%; /* Adjust for vertical centering */
-      transform: translateY(-250%); /* Adjust for vertical centering */
-    }
   }
-  
+
+  .h1-text {
+      font-size: 2.5rem; /* Adjust font size for smaller screens */
+      padding-top: 7rem; /* Increase padding to prevent overlap */
+  }
+
+  .short-desc {
+      font-size: 1em; /* Adjust font size for smaller screens */
+      padding-top: 1rem; /* Increase padding to prevent overlap */
+  }
+
+  .calendar iframe {
+      width: 100%;
+      height: 400px; /* Adjust iframe height for smaller screens */
+  }
+}
+
+/* Adjustments for smaller heights */
+@media (max-height: 600px) {
+  .h1-text {
+      font-size: 2rem; /* Adjust font size for smaller heights */
+      padding-top: 5rem; /* Adjust padding */
+  }
+
+  .short-desc {
+      font-size: 0.9em; /* Adjust font size for smaller heights */
+      padding-top: 1rem; /* Adjust padding */
+  }
+
+  .calendar iframe {
+      max-height: 300px; /* Adjust iframe height for smaller heights */
+  }
+}
+
+@media (max-height: 500px) {
+  .h1-text {
+      font-size: 1.8rem; /* Further adjust font size */
+      padding-top: 4rem; /* Further adjust padding */
+  }
+
+  .short-desc {
+      font-size: 0.8em; /* Further adjust font size */
+      padding-top: 0.5rem; /* Further adjust padding */
+  }
+
+  .calendar iframe {
+      max-height: 250px; /* Further adjust iframe height */
+  }
+}
