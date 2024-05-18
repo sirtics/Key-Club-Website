@@ -26,7 +26,7 @@
     position: absolute;
     text-align: left;
     color: white;
-    font-size: 4rem;
+    font-size: 5.5rem;
     font-family: Poppins;
     font-weight: 700;
     word-wrap: break-word;
@@ -39,13 +39,12 @@
     position: absolute;
     text-align: left;
     color: white;
-    padding-top: 3rem;
-    font-size: 1.1em;
+    font-size: 1.3rem;
     font-family: Poppins;
-    font-weight: 500;
+    margin-top: 2rem;
+    font-weight: 400;
     word-wrap: break-word;
     left: 5%; /* Align left */
-    top: 70%;
     transform: translateY(-50%); /* Vertically center */
   }
 
@@ -72,4 +71,36 @@
       transform: translateY(-250%); /* Adjust for vertical centering */
     }
   }
+
+
   
+/* SCROLLBAR CSS */
+/* SCROLLBAR CSS */
+
+body {
+  --sb-track-color: #4e5050;
+  --sb-thumb-color: #d88e37;
+  --sb-size: 6px;
+}
+
+body::-webkit-scrollbar {
+  width: var(--sb-size)
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 1px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 1px;
+  
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body {
+    scrollbar-color: var(--sb-thumb-color)
+                     var(--sb-track-color);
+  }
+}

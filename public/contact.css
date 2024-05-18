@@ -50,7 +50,7 @@ div#header{
     border: none;
     width: 120px;
     height: 5px;
-    background-color: #ffbb00;
+    background-color: #d88e37;
     border-radius: 10px;
     margin-bottom: 20px;
 
@@ -76,7 +76,7 @@ div#header{
 }
 
 .contact-inputs:focus{
-    border: 2px solid #ffbb00;
+    border: 2px solid #d88e37;
 }
 
 .contact-inputs::placeholder{
@@ -92,7 +92,7 @@ div#header{
     border: none;
     padding: 2px;
     border-radius: 100%;
-    background: linear-gradient(270deg, #ffbb00, #2C4E80);
+    background: linear-gradient(270deg, #d88e37, #2C4E80);
     cursor: pointer;
 }
 
@@ -170,3 +170,41 @@ div#header{
         padding-top: 1rem;
     }
 }
+
+
+
+
+
+
+
+/* SCROLLBAR CSS */
+/* SCROLLBAR CSS */
+
+
+body {
+    --sb-track-color: #4e5050;
+    --sb-thumb-color: #d88e37;
+    --sb-size: 6px;
+  }
+  
+  body::-webkit-scrollbar {
+    width: var(--sb-size)
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 1px;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 1px;
+    
+  }
+  
+  @supports not selector(::-webkit-scrollbar) {
+    body {
+      scrollbar-color: var(--sb-thumb-color)
+                       var(--sb-track-color);
+    }
+  }

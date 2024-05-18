@@ -172,3 +172,48 @@ section#hero {
       max-height: 250px; /* Further adjust iframe height */
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* SCROLLBAR CSS */
+/* SCROLLBAR CSS */
+
+body {
+  --sb-track-color: #4e5050;
+  --sb-thumb-color: #d88e37;
+  --sb-size: 6px;
+}
+
+body::-webkit-scrollbar {
+  width: var(--sb-size)
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 1px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 1px;
+  
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body {
+    scrollbar-color: var(--sb-thumb-color)
+                     var(--sb-track-color);
+  }
+}
