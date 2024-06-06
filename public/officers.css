@@ -1,106 +1,116 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    
-  }
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
   
-  body, html {
-    overflow-y: auto;
-    overflow-x: hidden;
-  }
-  
-  section#hero {
-    height: 100vh;
-    color: white;
-    background-attachment: fixed;
-    display: flex;
+}
+
+body, html {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+section#hero {
+  height: 100vh;
+  color: white;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background: linear-gradient(rgba(0, 0, 0, 0.397), rgba(0, 0, 0, 0.384)), url('./images/parkview2.jpg') no-repeat center center / cover;
+}
+
+.h1-text {
+  width: 40rem;
+  height: 15rem;
+  padding-top: 4rem;
+  position: absolute;
+  text-align: center; /* Center text */
+  color: white;
+  font-size: 5rem;
+  font-family: Poppins;
+  font-weight: 700;
+  word-wrap: break-word;
+  left: 50%; /* Center horizontally */
+  top: 40%;
+  transform: translateX(-50%) translateY(-50%); /* Center both horizontally and vertically */
+}
+
+.short-desc {
+  max-width: 57.75rem;
+  position: absolute;
+  text-align: center; /* Center text */
+  color: white;
+  padding-top: 3rem;
+  font-size: 2rem;
+  font-family: Poppins;
+  font-weight: 500;
+  word-wrap: break-word;
+  left: 50%; /* Center horizontally */
+  top: 70%;
+  transform: translateX(-50%) translateY(-50%); /* Center both horizontally and vertically */
+}
+
+@media (max-width: 700px){
+  .h1-text, .short-desc {
+    text-align: center;
     align-items: center;
-    justify-content: space-evenly;
-    background: linear-gradient(rgba(0, 0, 0, 0.397), rgba(0, 0, 0, 0.384)), url('./images/parkview2.jpg') no-repeat center center / cover;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    left: 0;
+    top: 0;
+    transform: none; /* Reset transformation */
+    padding-top: 0; /* Remove unnecessary padding */
+    width: 100%; /* Make full-width on smaller screens */
   }
   
   .h1-text {
-    height: 15rem;
-    padding-top: 4rem;
-    position: absolute;
-    text-align: left;
-    color: white;
-    font-size: 5.5rem;
-    font-family: Poppins;
-    font-weight: 700;
-    word-wrap: break-word;
-    left: 5%; /* Align left */
-    top: 40%;
+    font-size: 3rem; /* Reduce font size on smaller screens */
   }
   
   .short-desc {
-    max-width: 30rem;
-    position: absolute;
-    text-align: left;
-    color: white;
-    font-size: 1.3rem;
-    font-family: Poppins;
-    margin-top: 2rem;
-    font-weight: 400;
-    word-wrap: break-word;
-    left: 5%; /* Align left */
-    transform: translateY(-50%); /* Vertically center */
+    font-size: 1.5rem; /* Reduce font size on smaller screens */
   }
+}
 
-  @media (max-width: 700px){
-    .h1-text, .short-desc {
-      text-align: center;
-      align-items: center;
-      display: flex;
-      justify-content: center;
-      position: relative;
-      left: 0;
-      top: 0;
-      transform: none; /* Reset transformation */
-      padding-top: 0; /* Remove unnecessary padding */
-    }
-    
-    .h1-text {
-      top: 50%; /* Center vertically */
-      transform: translateY(-50%); /* Adjust for vertical centering */
-    }
-    
-    .short-desc {
-      top: 60%; /* Adjust for vertical centering */
-      transform: translateY(-250%); /* Adjust for vertical centering */
-    }
+@media (max-width: 400px){
+  .h1-text {
+    font-size: 2rem; /* Reduce font size even further on very small screens */
   }
-
-
   
+  .short-desc {
+    font-size: 1rem; /* Reduce font size even further on very small screens */
+  }
+}
+
 /* SCROLLBAR CSS */
 /* SCROLLBAR CSS */
 
 body {
-  --sb-track-color: #4e5050;
-  --sb-thumb-color: #d88e37;
-  --sb-size: 6px;
+--sb-track-color: #4e5050;
+--sb-thumb-color: #d88e37;
+--sb-size: 6px;
 }
 
 body::-webkit-scrollbar {
-  width: var(--sb-size)
+width: var(--sb-size)
 }
 
 body::-webkit-scrollbar-track {
-  background: var(--sb-track-color);
-  border-radius: 1px;
+background: var(--sb-track-color);
+border-radius: 1px;
 }
 
 body::-webkit-scrollbar-thumb {
-  background: var(--sb-thumb-color);
-  border-radius: 1px;
-  
+background: var(--sb-thumb-color);
+border-radius: 1px;
+
 }
 
 @supports not selector(::-webkit-scrollbar) {
-  body {
-    scrollbar-color: var(--sb-thumb-color)
-                     var(--sb-track-color);
-  }
+body {
+  scrollbar-color: var(--sb-thumb-color)
+                   var(--sb-track-color);
+}
 }

@@ -47,6 +47,7 @@ body {
   }
 .social-icon__link:hover {
   transform: translateY(-10px);
+  color:#d88e37;
 }
 
 .menu__link {

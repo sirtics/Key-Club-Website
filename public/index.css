@@ -1,236 +1,235 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    
-  }
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
   
-  body, html {
-    overflow-y: auto;
-    overflow-x: hidden;
-  }
-  
-  #hero {
-    width: 100%;
-    min-height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.397), rgba(0, 0, 0, 0.384)), url('./images/parkview2.jpg') no-repeat center center / cover;
-    color: white;
-    background-attachment: fixed;
-  }
-
-div#header{
-    position: fixed;
-    width: 100%;
-    z-index: 2;
 }
 
-  .h1-text {
-    width: 40rem;
-    height: 15rem;
-    padding-top: 4rem;
-    position: absolute;
-    text-align: left;
-    color: white;
-    font-size: 5rem;
-    font-family: Poppins;
-    font-weight: 700;
-    word-wrap: break-word;
-    left: 5%; /* Align left */
-    top: 40%;
-    transform: translateY(-50%); /* Vertically center */
-  }
-  
-  .short-desc {
-    max-width: 57.75rem;
-    position: absolute;
-    text-align: left;
-    color: white;
-    padding-top: 3rem;
-    font-size: 1.3em;
-    font-family: Poppins;
-    font-weight: 500;
-    word-wrap: break-word;
-    left: 5%; /* Align left */
-    top: 70%;
-    transform: translateY(-50%); /* Vertically center */
-  }
-  
-  .text {
-    padding-top: 3rem;
-  }
-  
-  /* CAROUSEL CSS */
-  
-  .centered {
-    font-size: 3rem;
-    text-align: center;
-    color: white;
-    font-weight: 600;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
+body, html {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
 
-  .carousel {
-    width: 80vw;
-    height: 30rem;
-    position: relative; /* Add this */
-    margin-bottom: 2rem;
-    margin-left: 10%;
-  }
-  
-  .carousel [data-carousel-slides] {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-  }
-  .carousel [data-carousel-dots] {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    z-index: 2;
-    position: absolute;
-    left: 50%;
-    bottom: 2vh;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 1rem;
-  }
-  .carousel [data-carousel-dots] [data-carousel-dot] {
-    background-color: rgba(255, 255, 255, 1);
-    height: 0.78rem;
-    width: 0.78rem;
-    border-radius: 0.78rem;
-    cursor: pointer;
-    transition: 0.5s;
-    opacity: 0.5;
-  }
+#hero {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.397), rgba(0, 0, 0, 0.384)), url('./images/parkview2.jpg') no-repeat center center / cover;
+  color: white;
+  background-attachment: fixed;
+}
 
-  .carousel [data-carousel-dots] [data-active] {
-    opacity: 1;
-  }
-  .slide {
-    position: absolute;
-    inset: 0;
-    opacity: 0;
-    transition-property: opacity;
-    transition-duration: 200ms;
-    transition-timing-function: ease-in-out;
-    transition-delay: 200ms;
-  }
-  .slide[data-active] {
-    opacity: 1;
-    z-index: 1;
-    transition-delay: 0ms;
-  }
-  .slide > img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 10px;
-  }
-  .carousel-button {
-    position: absolute;
-    background: none;
-    border: none;
-    outline: none;
-    font-size: 4rem;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 2;
-    color: rgba(255, 255, 255, 0.5);
-    cursor: pointer;
-    padding: 0 0.5rem;
-    border-radius: 0.25rem;
-    background-color: rgba(0, 0, 0, 0.1);
-    transition: 0.5s;
-  }
-  .carousel-button:hover,
-  .carousel-button:focus {
-    background-color: rgba(0, 0, 0, 0.3);
-    color: #fff;
-  }
-  
-  .carousel-button[data-carousel-btn="prev"] {
-    left: 1rem;
-  }
-  
-  .carousel-button[data-carousel-btn="next"] {
-    right: 1rem;
-  }
-  
+div#header{
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+}
 
+.h1-text {
+  width: 40rem;
+  height: 15rem;
+  padding-top: 4rem;
+  position: absolute;
+  text-align: center; /* Center text */
+  color: white;
+  font-size: 5rem;
+  font-family: Poppins;
+  font-weight: 700;
+  word-wrap: break-word;
+  left: 50%; /* Center horizontally */
+  top: 40%;
+  transform: translateX(-50%) translateY(-50%); /* Center both horizontally and vertically */
+}
 
+.short-desc {
+  max-width: 57.75rem;
+  position: absolute;
+  text-align: center; /* Center text */
+  color: white;
+  padding-top: 3rem;
+  font-size: 1.3em;
+  font-family: Poppins;
+  font-weight: 500;
+  word-wrap: break-word;
+  left: 50%; /* Center horizontally */
+  top: 70%;
+  transform: translateX(-50%) translateY(-50%); /* Center both horizontally and vertically */
+}
 
+.text {
+  padding-top: 3rem;
+}
 
+/* CAROUSEL CSS */
 
+.centered {
+  font-size: 3rem;
+  text-align: center;
+  color: white;
+  font-weight: 600;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
+.carousel {
+  width: 80vw;
+  height: 30rem;
+  position: relative; /* Add this */
+  margin-bottom: 2rem;
+  margin-left: 10%;
+}
 
+.carousel [data-carousel-slides] {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.carousel [data-carousel-dots] {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  z-index: 2;
+  position: absolute;
+  left: 50%;
+  bottom: 2vh;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 1rem;
+}
+.carousel [data-carousel-dots] [data-carousel-dot] {
+  background-color: rgba(255, 255, 255, 1);
+  height: 0.78rem;
+  width: 0.78rem;
+  border-radius: 0.78rem;
+  cursor: pointer;
+  transition: 0.5s;
+  opacity: 0.5;
+}
 
+.carousel [data-carousel-dots] [data-active] {
+  opacity: 1;
+}
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 200ms;
+  transition-timing-function: ease-in-out;
+  transition-delay: 200ms;
+}
+.slide[data-active] {
+  opacity: 1;
+  z-index: 1;
+  transition-delay: 0ms;
+}
+.slide > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+}
+.carousel-button {
+  position: absolute;
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 4rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  padding: 0 0.5rem;
+  border-radius: 0.25rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  transition: 0.5s;
+}
+.carousel-button:hover,
+.carousel-button:focus {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+}
 
-  /* Responsive Design */
-  
-  @media (max-width: 1024px) {
-      .h1-text {
-        width: 30rem;
-        height: 12rem;
-        padding-top: 3rem;
-        font-size: 4rem;
-        left: 5%;
-        top: 35%;
-      }
-      .button {
-        width: 200px;
-        height: 50px;
-        font-size: 18px;
-      }
-  }
-  
-  @media (max-width: 768px) {
-      .h1-text {
-        font-size: 3rem;
-        padding-top: 2rem;
-        height: 8rem;
-        top: 40%;
-      }
-      .button {
-        width: 100px;
-        height: 40px;
-        font-size: 16px;
-      }
-  }
-  
+.carousel-button[data-carousel-btn="prev"] {
+  left: 1rem;
+}
+
+.carousel-button[data-carousel-btn="next"] {
+  right: 1rem;
+}
 
 
-  @media (max-width: 480px)
-  {
-    .h1-text{
-      padding-bottom: 2rem;
-        width: auto;
+
+
+
+
+
+
+
+
+/* Responsive Design */
+
+@media (max-width: 1024px) {
+    .h1-text {
+      width: 30rem;
+      height: 12rem;
+      padding-top: 3rem;
+      font-size: 4rem;
+      top: 35%;
     }
-    
-    .short-desc{
-      margin-top: 1rem;
-        font-size: 1rem;
+    .button {
+      width: 200px;
+      height: 50px;
+      font-size: 18px;
     }
+}
+
+@media (max-width: 768px) {
+    .h1-text {
+      font-size: 3rem;
+      padding-top: 2rem;
+      height: 8rem;
+      top: 40%;
+    }
+    .button {
+      width: 100px;
+      height: 40px;
+      font-size: 16px;
+    }
+}
+
+
+
+@media (max-width: 480px)
+{
+  .h1-text{
+    padding-bottom: 2rem;
+      width: auto;
   }
   
+  .short-desc{
+    margin-top: 1rem;
+      font-size: 1rem;
+  }
+}
+
 @media (max-height: 768px){
-    .h1-text{
-        padding-bottom: 1.5rem;
-    }
-    .short-desc{
-        margin-top: 1rem;
-        top: 80%;
-    }
-    div#header{
-        position: absolute;
-        width: 100%;
-        z-index: 2;
-    }
+  .h1-text{
+      padding-bottom: 1.5rem;
+  }
+  .short-desc{
+      margin-top: 1rem;
+      top: 80%;
+  }
+  div#header{
+      position: absolute;
+      width: 100%;
+      z-index: 2;
+  }
 
 }
 
@@ -252,29 +251,29 @@ div#header{
 /* SCROLLBAR CSS */
 
 body {
-  --sb-track-color: #4e5050;
-  --sb-thumb-color: #d88e37;
-  --sb-size: 6px;
+--sb-track-color: #4e5050;
+--sb-thumb-color: #d88e37;
+--sb-size: 6px;
 }
 
 body::-webkit-scrollbar {
-  width: var(--sb-size)
+width: var(--sb-size)
 }
 
 body::-webkit-scrollbar-track {
-  background: var(--sb-track-color);
-  border-radius: 1px;
+background: var(--sb-track-color);
+border-radius: 1px;
 }
 
 body::-webkit-scrollbar-thumb {
-  background: var(--sb-thumb-color);
-  border-radius: 1px;
-  
+background: var(--sb-thumb-color);
+border-radius: 1px;
+
 }
 
 @supports not selector(::-webkit-scrollbar) {
-  body {
-    scrollbar-color: var(--sb-thumb-color)
-                     var(--sb-track-color);
-  }
+body {
+  scrollbar-color: var(--sb-thumb-color)
+                   var(--sb-track-color);
+}
 }
